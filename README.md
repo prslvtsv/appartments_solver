@@ -1,5 +1,11 @@
 # work in progress version
 
+uses py 3.9 only 
+
+generate board with gh definition 
+
+run gh_solver in any IDE
+
 ## installing
 
 Opt A:
