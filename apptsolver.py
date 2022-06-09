@@ -11,21 +11,24 @@ from polyomino.board import Rectangle, Chessboard, Irregular
 from polyomino.tileset import many
 
 
-domino = const.DOMINO
-monomino = const.MONOMINO
-tr = const.TROMINOS["Right"]
+# domino = const.DOMINO
+# monomino = const.MONOMINO
+# tr = const.TROMINOS["Right"]
 
-chessboard = Chessboard()
+# chessboard = Chessboard()
 
-problem_a = chessboard.tile_with_many(domino)
-problem_b = chessboard.tile_with_set(
-    many(tr).and_repeated_exactly(4, monomino)
-).with_heuristics()
-# problem_c = chessboard.tile_with_set(may(tr), reflecti)
+# problem_a = chessboard.tile_with_many(domino)
+# problem_b = chessboard.tile_with_set(
+#     many(tr).and_repeated_exactly(4, monomino)
+# ).with_heuristics()
+# # problem_c = chessboard.tile_with_set(may(tr), reflecti)
 
 
-sa = problem_a.solve()
-sb = problem_b.solve()
+# sa = problem_a.solve()
+# sb = problem_b.solve()
 
-print(sa.tiling)
-print(sb.display())
+# print(sa.tiling)
+# print(sb.display())
+
+
+sec_a = Rectangle(13, 3)
