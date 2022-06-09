@@ -10,6 +10,9 @@ from polyomino.piece import display
 from polyomino.board import Rectangle, Chessboard, Irregular
 from polyomino.tileset import many
 
+# import exact_cover as exc
+
+# print(dir(exc))
 
 domino = const.DOMINO
 monomino = const.MONOMINO
