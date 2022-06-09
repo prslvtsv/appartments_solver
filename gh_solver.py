@@ -19,6 +19,7 @@ floor = Rectangle(13, 3).remove_all(
     [
         (6, 0),
         (7, 0),
+        (8, 0),
         (2, 1),
         (3, 1),
         (4, 1),
@@ -28,21 +29,25 @@ floor = Rectangle(13, 3).remove_all(
         (8, 1),
         (9, 1),
         (10, 1),
+        (11, 1),
     ]
 )
 
-print(floor.display())
 
 problem_a = floor.tile_with_set(
-    many(domino).and_repeated_exactly(4, monomino)
+    many(domino).and_repeated_exactly(2, monomino)
 ).with_heuristics()
 problem_b = floor.tile_with_set(
-    many(domino).and_repeated_exactly(2, tr).and_repeated_exactly(4, monomino)
+    many(domino).and_repeated_exactly(2, tr).and_repeated_exactly(2, monomino)
 ).with_heuristics()
 
 
 sa = problem_a.solve()
 sb = problem_b.solve()
 
-print(sa.display())
-print(sb.display())
+print("empty floor")
+print(floor.display(), end="\n\n")
+print("tiled with set 1")
+print(sa.display(), end="\n\n")
+print("tiled with set 2")
+print(sb.display(), end="\n\n")

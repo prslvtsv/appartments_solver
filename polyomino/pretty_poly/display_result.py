@@ -8,7 +8,7 @@ def print_alpha_blocks(grid):
     chars = "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     table = [[chars[n] for n in l] for l in grid]
     for row in table:
-        print "".join(row)
+        print("".join(row))
 
 
 def random_color():
