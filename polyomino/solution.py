@@ -1,4 +1,4 @@
-from pretty_poly import make_ascii
+from .pretty_poly import make_ascii
 
 
 class Solution(object):
