@@ -91,3 +91,7 @@ def repeated_exactly(count, tile):
 
 def any_number_of(tiles):
     return Tileset([], [], tiles)
+
+
+def all_optional(tiles):
+    return Tileset([], tiles, tiles)
