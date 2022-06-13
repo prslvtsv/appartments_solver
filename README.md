@@ -6,6 +6,8 @@ generate board with gh definition
 
 run gh_solver in any IDE
 
+based on [polyomino](https://github.com/jwg4/polyomino) and [exact-cover](https://github.com/jwg4/exact_cover) by [jwg4](https://github.com/jwg4)
+
 ## installing
 
 Opt A:
@@ -23,5 +25,5 @@ Opt B:
 
  - numpy >= 1.21
  - exact-cover=0.4.3 ⚠️
-  [exact_cover](https://github.com/jwg4/exact_cover)
+  [exact-cover](https://github.com/jwg4/exact_cover)
  - setuptools=51.1.3 ⚠️
