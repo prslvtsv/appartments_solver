@@ -8,27 +8,11 @@ import sys
 import argparse
 from polyomino.board import Rectangle
 from polyomino.tileset import Tileset
-from polyomino.tileset import many, any_number_of, all_optional
 
-# import exact_cover as exc
 
-# print(dir(exc))
 def construct_board_removed(size, removed):
-
     torem = [(int(r.split(",")[0]), int(r.split(",")[1])) for r in removed.split(":")]
-
     return Rectangle(size[0], size[1]).remove_all(torem)
-
-
-def construct_tileset(tiles):
-    result = []
-    tset = tiles.split("..")
-
-    for t in tset:
-        tt = [(int(r.split(",")[0]), int(r.split(",")[1])) for r in t.split(":")]
-        result.append(tt)
-    # print(result)
-    return any_number_of(result).with_reflections()
 
 
 def construct_tileset_explicit(mandatory=[], optional=[], filler=[]):
@@ -55,7 +39,6 @@ def prepare_args():
     parser.add_argument("--mandatory", "-m", type=str)
     parser.add_argument("--optional", "-o", type=str)
     parser.add_argument("--filler", "-f", type=str)
-
     return parser.parse_args()
 
 
@@ -69,7 +52,6 @@ def parse_tile(lst):
 
 
 def main():
-
     args = prepare_args()
     mandatory = parse_tile(args.mandatory)
     optional = parse_tile(args.optional)
@@ -79,9 +61,7 @@ def main():
     output_board(board)
 
     tileset = construct_tileset_explicit(mandatory, optional, filler)
-
     solution = solve_explicit_set(board, tileset)
-    # print(solution.display())
     output_solution(solution)
 
 
